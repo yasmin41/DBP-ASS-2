@@ -3,10 +3,10 @@ CREATE TABLE countries (
     median_age NUMBER(6, 2)
 );
 
-INSERT INTO countries (country_name, median_age) VALUES ('Japan', 48.4);
-INSERT INTO countries (country_name, median_age) VALUES ('USA', 38.1);
-INSERT INTO countries (country_name, median_age) VALUES ('India', 28.4);
-INSERT INTO countries (country_name, median_age) VALUES ('Germany', 45.7);
+INSERT INTO countries (country_name, median_age) VALUES ('Japan', 49.5);
+INSERT INTO countries (country_name, median_age) VALUES ('USA', 38.5);
+INSERT INTO countries (country_name, median_age) VALUES ('India', 29.5);
+INSERT INTO countries (country_name, median_age) VALUES ('Germany', 46.7);
 COMMIT;
 
 
