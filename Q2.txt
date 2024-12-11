@@ -1,3 +1,7 @@
+--Yasmin MHDFadi Hababa
+--202110369
+
+
 CREATE TABLE countries (
     country_name VARCHAR2(50),
     median_age NUMBER(6, 2)
