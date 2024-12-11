@@ -1,4 +1,5 @@
 Q1.
+
 DECLARE
     TODAY DATE := SYSDATE;
     TOMORROW TODAY%TYPE;
@@ -8,8 +9,9 @@ BEGIN
     DBMS_OUTPUT.PUT_LINE('Today: ' || TO_CHAR(TODAY, 'DD-MON-YYYY'));
     DBMS_OUTPUT.PUT_LINE('Tomorrow: ' || TO_CHAR(TOMORROW, 'DD-MON-YYYY'));
 END;
---------------------
-Q2.
+
+---------------------------------
+
 DECLARE
     my_date DATE := SYSDATE;
     v_last_day DATE;
@@ -18,8 +20,9 @@ BEGIN
     DBMS_OUTPUT.PUT_LINE('Today''s date: ' || TO_CHAR(my_date, 'Month DD, YYYY'));
     DBMS_OUTPUT.PUT_LINE('Last day of the month: ' || TO_CHAR(v_last_day, 'Month DD, YYYY'));
 END;
+
 ---------------------------------
-Q3.
+
 DECLARE
     my_date DATE := SYSDATE;
     v_last_day DATE;
