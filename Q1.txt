@@ -1,0 +1,37 @@
+Q1.
+DECLARE
+    TODAY DATE := SYSDATE;
+    TOMORROW TODAY%TYPE;
+BEGIN
+    DBMS_OUTPUT.PUT_LINE('Hello World');
+    TOMORROW := TODAY + 1;
+    DBMS_OUTPUT.PUT_LINE('Today: ' || TO_CHAR(TODAY, 'DD-MON-YYYY'));
+    DBMS_OUTPUT.PUT_LINE('Tomorrow: ' || TO_CHAR(TOMORROW, 'DD-MON-YYYY'));
+END;
+--------------------
+Q2.
+DECLARE
+    my_date DATE := SYSDATE;
+    v_last_day DATE;
+BEGIN
+    v_last_day := LAST_DAY(my_date);
+    DBMS_OUTPUT.PUT_LINE('Today''s date: ' || TO_CHAR(my_date, 'Month DD, YYYY'));
+    DBMS_OUTPUT.PUT_LINE('Last day of the month: ' || TO_CHAR(v_last_day, 'Month DD, YYYY'));
+END;
+---------------------------------
+Q3.
+DECLARE
+    my_date DATE := SYSDATE;
+    v_last_day DATE;
+    new_date DATE;
+    months_between_dates NUMBER;
+BEGIN
+    v_last_day := LAST_DAY(my_date);
+    new_date := my_date + 45; -- Add 45 days
+    months_between_dates := MONTHS_BETWEEN(new_date, my_date);
+    
+    DBMS_OUTPUT.PUT_LINE('Today''s date: ' || TO_CHAR(my_date, 'Month DD, YYYY'));
+    DBMS_OUTPUT.PUT_LINE('Last day of the month: ' || TO_CHAR(v_last_day, 'Month DD, YYYY'));
+    DBMS_OUTPUT.PUT_LINE('Date after adding 45 days: ' || TO_CHAR(new_date, 'Month DD, YYYY'));
+    DBMS_OUTPUT.PUT_LINE('Months between today and new date: ' || months_between_dates);
+END;
